@@ -9,5 +9,4 @@ public class MelpappApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MelpappApplication.class, args);
 	}
-
 }

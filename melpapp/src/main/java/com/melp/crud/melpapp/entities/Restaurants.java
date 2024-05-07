@@ -1,16 +1,16 @@
 package com.melp.crud.melpapp.entities;
 
-import lombok.Data;
-import javax.persistence.*;
-import javax.persistence.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
-@Data
 @Entity
 @Table(name = "restaurant")
 public class Restaurants {
 
-    @Id
+	@Id
     private String id;
+	
     private int rating;
     private String name;
     private String site;
@@ -19,14 +19,95 @@ public class Restaurants {
     private String street;
     private String city;
     private String state;
-    private double lat;
-    private double lng;
+    private float lat;
+    private float lng;
+    
+	public String getId() {
+		return id;
+	}
 
-    /*@Column(columnDefinition = "geometry(Point,4326)")
-    private Point location;
+	public void setId(String id) {
+		this.id = id;
+	}
 
-    public void setLocation(double latitude, double longitude) {
-        GeometryFactory geometryFactory = new GeometryFactory(new PrecisionModel(), 4326);
-        this.location = geometryFactory.createPoint(new Coordinate(longitude, latitude));
-    } */
+	public int getRating() {
+		return rating;
+	}
+
+	public void setRating(int rating) {
+		this.rating = rating;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getSite() {
+		return site;
+	}
+
+	public void setSite(String site) {
+		this.site = site;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getStreet() {
+		return street;
+	}
+
+	public void setStreet(String street) {
+		this.street = street;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public double getLat() {
+		return lat;
+	}
+
+	public void setLat(float lat) {
+		this.lat = lat;
+	}
+
+	public double getLng() {
+		return lng;
+	}
+
+	public void setLng(float lng) {
+		this.lng = lng;
+	}	
+
 }

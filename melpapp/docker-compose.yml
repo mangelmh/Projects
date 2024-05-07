@@ -1,0 +1,24 @@
+version: '3.8'
+
+services: 
+  java_app:
+     container_name: java_app
+     image: pee-java-app:1.0.0
+     build: .
+     ports:
+       - 8080:8080 
+     environment:
+       - DATABASE_URL=jdbc:postgresql://dpg-cos8k8i0si5c739r0pv0-a.virginia-postgres.render.com/restaurants_7qj9
+       - DATABASE_USERNAME=restaurants_7qj9_user
+       - DATABASE_PASSWORD=5OTNzRmBin0sD1YeN5Gomm5ZV7MqnNi9
+     depends_on:
+       - java_db
+  java_db:
+     container_name: java_db
+     image: postgres:16
+     ports: 
+       - 5432:5432
+     environment:
+       POSTGRES_USER: postgres
+       POSTGRES_PASSWORD: postgres
+       POSTGRES_DB: postgres 

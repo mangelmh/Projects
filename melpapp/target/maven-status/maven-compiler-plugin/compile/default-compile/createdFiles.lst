@@ -1,0 +1,4 @@
+com\melp\crud\melpapp\entities\Restaurants.class
+com\melp\crud\melpapp\MelpappApplication.class
+com\melp\crud\melpapp\controller\RestaurantsController.class
+com\melp\crud\melpapp\repository\RestaurantsRepository.class
